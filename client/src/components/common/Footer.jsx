@@ -1,0 +1,15 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { MapPin, ShieldCheck, Sparkles, UtensilsCrossed } from 'lucide-react';
+import quickbiteLogo from '../../assets/quickbite/quickbite-logo-main.png';
+
+export const Footer = () => <footer className="relative mt-6 overflow-hidden bg-[#061728] text-slate-100">
+  <div className="pointer-events-none absolute -left-28 -top-32 h-72 w-72 rounded-full bg-orange-500/10 blur-3xl" /><div className="pointer-events-none absolute -bottom-36 right-0 h-72 w-72 rounded-full bg-sky-500/10 blur-3xl" />
+  <div className="relative mx-auto max-w-[1560px] px-4 py-12 sm:px-6 lg:px-8"><div className="grid gap-10 md:grid-cols-[1.35fr_.8fr_.8fr_1fr]">
+    <div><Link to="/" className="inline-block rounded-2xl bg-white p-2 shadow-lg shadow-black/15"><img src={quickbiteLogo} alt="QuickBite" className="h-20 w-[255px] object-contain" /></Link><p className="mt-5 max-w-sm text-sm leading-6 text-slate-300">The local food you crave, brought from trusted neighbourhood kitchens straight to your door.</p><p className="mt-3 text-sm font-bold text-orange-300">Crave It. Get It. Love It.</p></div>
+    <div><h3 className="text-sm font-black uppercase tracking-wider text-white">For foodies</h3><ul className="mt-5 space-y-3 text-sm text-slate-300"><li><Link to="/restaurants" className="transition hover:text-orange-300">Browse restaurants</Link></li><li><Link to="/orders" className="transition hover:text-orange-300">Your orders</Link></li><li><Link to="/profile" className="transition hover:text-orange-300">Addresses & profile</Link></li></ul></div>
+    <div><h3 className="text-sm font-black uppercase tracking-wider text-white">For partners</h3><ul className="mt-5 space-y-3 text-sm text-slate-300"><li><Link to="/register" className="transition hover:text-orange-300">Partner with QuickBite</Link></li><li><Link to="/owner" className="transition hover:text-orange-300">Restaurant portal</Link></li><li><Link to="/admin" className="transition hover:text-orange-300">Admin portal</Link></li></ul></div>
+    <div className="rounded-2xl border border-white/10 bg-white/[.045] p-5"><h3 className="text-sm font-black text-white">Made for local cravings</h3><div className="mt-4 space-y-3 text-xs text-slate-300"><p className="flex gap-2"><MapPin className="h-4 w-4 shrink-0 text-orange-300" />Discover the best kitchens around Chandigarh.</p><p className="flex gap-2"><ShieldCheck className="h-4 w-4 shrink-0 text-orange-300" />Fresh food from verified restaurant partners.</p><p className="flex gap-2"><UtensilsCrossed className="h-4 w-4 shrink-0 text-orange-300" />A quick bite for every appetite.</p></div></div>
+  </div></div>
+  <div className="relative border-t border-white/10"><div className="mx-auto flex max-w-[1560px] flex-col gap-2 px-4 py-5 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8"><span>© {new Date().getFullYear()} QuickBite. All rights reserved.</span><span className="flex items-center gap-1 text-slate-300"><Sparkles className="h-3.5 w-3.5 text-orange-300" /> Fresh, fast and made for cravings.</span></div></div>
+</footer>;
